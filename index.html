@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aristos Peluquería &amp; Barbería · Jardín Balbuena, CDMX</title>
+<meta name="description" content="Cortes de cabello y barba en Jardín Balbuena, Ciudad de México. Calificación 4.9 en Google con más de 300 reseñas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#EAF0F5; --surface:#FFFFFF; --ink:#14213D; --muted:#4A5873; --line:#C9D3E0;
+  --red:#C8102E; --blue:#1F4E9C; --on-red:#FFFFFF;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1930; --surface:#16264A; --ink:#EAF0F7; --muted:#A9B7CF; --line:#2B3E66;
+    --red:#E5384F; --blue:#6E9BE8; --on-red:#0E1930;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1930; --surface:#16264A; --ink:#EAF0F7; --muted:#A9B7CF; --line:#2B3E66;
+  --red:#E5384F; --blue:#6E9BE8; --on-red:#0E1930;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.95;margin:0;letter-spacing:.01em}
+
+/* Barber pole: the single memorable element */
+.pole{height:1.1rem;background:repeating-linear-gradient(135deg,var(--red) 0 1.1rem,var(--surface) 1.1rem 2.2rem,var(--blue) 2.2rem 3.3rem,var(--surface) 3.3rem 4.4rem);background-size:6.2226rem 100%;animation:spin 3s linear infinite}
+@keyframes spin{to{background-position:6.2226rem 0}}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0}
+.logo{font-family:var(--display);font-weight:900;font-size:1.6rem;text-decoration:none;letter-spacing:.02em}
+nav a{margin-left:1.25rem;text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+@media (max-width:34rem){nav a.hide-s{display:none}}
+
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:.4rem;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.main{background:var(--red);border-color:var(--red);color:var(--on-red)}
+.btn.alt{background:transparent;color:var(--ink)}
+
+.hero{padding:3.5rem 0 3rem}
+.hero h1{font-size:clamp(4.2rem,17vw,10rem);text-transform:uppercase}
+.hero .sub{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,4.5vw,2.2rem);margin:.6rem 0 0;color:var(--blue)}
+.hero p.lead{max-width:34rem;color:var(--muted);margin:1.4rem 0 1.8rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;margin-top:2rem;color:var(--muted);font-weight:500}
+.facts strong{color:var(--ink)}
+#estado{font-weight:600}
+#estado.on{color:#1E7A46}
+#estado.off{color:var(--red)}
+@media (prefers-color-scheme:dark){#estado.on{color:#5FD28F}}
+
+section{padding:3.5rem 0}
+section h2{font-size:clamp(2.4rem,7vw,3.8rem);margin-bottom:1.5rem}
+
+.services{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.services li{display:grid;grid-template-columns:minmax(9rem,16rem) 1fr;gap:.5rem 2rem;padding:1.15rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.services h3{font-size:1.9rem}
+.services p{margin:0;color:var(--muted);max-width:40rem}
+@media (max-width:34rem){.services li{grid-template-columns:1fr}}
+.note{margin-top:1rem;color:var(--muted);font-size:.95rem}
+
+.score{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.score b{font-family:var(--display);font-size:5rem;font-weight:900;line-height:1}
+.score span{color:var(--muted)}
+.quotes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.quotes blockquote{margin:0;padding:1.25rem 1.4rem;background:var(--surface);border-left:6px solid var(--red);border-radius:.25rem}
+.quotes p{margin:0 0 .6rem}
+.quotes cite{font-style:normal;color:var(--muted);font-size:.92rem}
+
+.visit{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+table{border-collapse:collapse;width:100%;max-width:26rem}
+th,td{text-align:left;padding:.6rem 0;border-bottom:1px solid var(--line);font-weight:500}
+td{text-align:right}
+tr.today th,tr.today td{color:var(--red);font-weight:600}
+address{font-style:normal;margin-bottom:1.25rem}
+
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#inicio">ARISTOS</a>
+    <nav aria-label="Principal">
+      <a class="hide-s" href="#servicios">Servicios</a>
+      <a class="hide-s" href="#opiniones">Opiniones</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+  </div>
+  <div class="pole" aria-hidden="true"></div>
+</header>
+
+<main id="inicio">
+  <div class="wrap hero">
+    <h1>Aristos</h1>
+    <p class="sub">Peluquería &amp; Barbería · Jardín Balbuena</p>
+    <p class="lead">Cortes de cabello y arreglo de barba con atención personal. Llega a la hora que te acomode o llama para apartar tu lugar.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+525589938925">Llamar ahora</a>
+      <a class="btn alt" href="https://wa.me/525589938925?text=Hola%2C%20quiero%20agendar%20un%20corte" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+    <div class="facts">
+      <span><strong>4.9</strong> en Google (325 reseñas)</span>
+      <span>Nicolás León 138, Jardín Balbuena</span>
+      <span id="estado"></span>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <ul class="services">
+        <li><h3>Corte de cabello</h3><p>Corte a tijera o con máquina, degradados y estilos clásicos. Dinos qué buscas y te recomendamos la mejor opción.</p></li>
+        <li><h3>Arreglo de barba</h3><p>Perfilado, recorte y acabado limpio en cuello y mejillas.</p></li>
+        <li><h3>Corrección de cortes</h3><p>¿Te hicieron un mal corte? Lo revisamos y lo arreglamos.</p></li>
+        <li><h3>Asesoría para dejar crecer el cabello</h3><p>Te decimos cómo cuidar cada etapa para que el largo se vea bien.</p></li>
+      </ul>
+      <p class="note">Pregunta el precio por teléfono o WhatsApp antes de tu visita.</p>
+    </div>
+  </section>
+
+  <section id="opiniones">
+    <div class="wrap">
+      <h2>Lo que dicen los clientes</h2>
+      <div class="score"><b>4.9</b><span>de 5 en Google, según 325 reseñas</span></div>
+      <div class="quotes">
+        <blockquote><p>Clientes que llegaron con un mal corte cuentan que aquí se los arreglaron como querían.</p><cite>Reseñas en Google</cite></blockquote>
+        <blockquote><p>Mencionan seguido a Óscar por su trato amable y porque escucha lo que cada quien pide.</p><cite>Reseñas en Google</cite></blockquote>
+        <blockquote><p>Destacan la atención cuidadosa y que les resolvieron todas sus dudas antes de cortar.</p><cite>Reseñas en Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="visitanos">
+    <div class="wrap">
+      <h2>Visítanos</h2>
+      <div class="visit">
+        <div>
+          <address>Nicolás León 138<br>Jardín Balbuena, Venustiano Carranza<br>15900 Ciudad de México</address>
+          <div class="cta">
+            <a class="btn main" href="https://www.google.com/maps/search/?api=1&amp;query=Aristos+Peluquer%C3%ADa+Barber%C3%ADa+Nicol%C3%A1s+Le%C3%B3n+138&amp;query_place_id=ChIJ-xKhY6P-0YURaIO2D-ymvVA" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn alt" href="tel:+525589938925">55 8993 8925</a>
+          </div>
+        </div>
+        <table aria-label="Horario">
+          <tbody id="horario">
+            <tr data-d="1"><th scope="row">Lunes</th><td>10 a.m.–8 p.m.</td></tr>
+            <tr data-d="2"><th scope="row">Martes</th><td>10 a.m.–8 p.m.</td></tr>
+            <tr data-d="3"><th scope="row">Miércoles</th><td>10 a.m.–8 p.m.</td></tr>
+            <tr data-d="4"><th scope="row">Jueves</th><td>10 a.m.–8 p.m.</td></tr>
+            <tr data-d="5"><th scope="row">Viernes</th><td>10 a.m.–8 p.m.</td></tr>
+            <tr data-d="6"><th scope="row">Sábado</th><td>9 a.m.–5 p.m.</td></tr>
+            <tr data-d="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="pole" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">Aristos Peluquería &amp; Barbería · Nicolás León 138, Jardín Balbuena, CDMX</div>
+</footer>
+
+<script>
+(function(){
+  var H={0:null,1:[10,20],2:[10,20],3:[10,20],4:[10,20],5:[10,20],6:[9,17]};
+  try{
+    var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Mexico_City",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var g=function(t){return p.filter(function(x){return x.type===t})[0].value};
+    var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var d=map[g("weekday")], h=parseInt(g("hour"),10)%24, m=parseInt(g("minute"),10);
+    var now=h+m/60, r=H[d], el=document.getElementById("estado");
+    var row=document.querySelector('tr[data-d="'+d+'"]'); if(row) row.className="today";
+    if(r && now>=r[0] && now<r[1]){el.textContent="Abierto ahora";el.className="on";}
+    else{el.textContent="Cerrado ahora";el.className="off";}
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
